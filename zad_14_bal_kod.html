@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> zadanie 14 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+        <!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        var m1bal = Number(prompt("M=" + ""));
+
+        var ulamek1 = "1/" + (m1bal + 2);
+        var ulamek2 = "1/" + (m1bal + 1) * (m1bal + 2);
+        var ulamek3 = "1/" + (m1bal* (m1bal + 1));
+
+        document.write("m=" + m1bal + "<br>");
+        document.write("1/" + m1bal +" = " + ulamek1 + "+" + ulamek2 + "+" + ulamek3 + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>

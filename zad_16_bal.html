@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        var aBal = Number(prompt("A=" + ""));
+        var bBal = Number(prompt("B=" + ""));
+
+        var result = aBal**3 + 3*aBal**2*bBal + 3*aBal*bBal**2 + bBal**3;
+
+        document.write("Wczytane liczby: A=" + aBal + " B=" + bBal + "<br>");
+        document.write(
+          '(' + aBal + ' + ' + bBal + ')^3 = ' +
+          aBal + '^3 + 3*' + aBal + '^2*' + bBal + ' + 3*' + 
+          aBal + '*' + bBal + '^2 + ' + bBal + '^3 = ' +
+          result
+        );
+
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>

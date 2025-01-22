@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        const d1bal = prompt("d1=" + "");
+        const g1bal = prompt("g1=" + "");
+        const d2bal= prompt("d2=" + "");
+        const g2bal = prompt("g2=" + "");
+
+        const hoursAmount = (d1bal - d2bal) * 24 + (g1bal - g2bal);
+        const secondsAmount = hoursAmount * 3600;
+
+        document.write("d1=" + d1bal + "<br>");
+        document.write("d2=" + d2bal + "<br>");
+        document.write("g1=" + g1bal + "<br>");
+        document.write("g2=" + g2bal + "<br>");
+        document.write("Ilość sekund=" + secondsAmount + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>

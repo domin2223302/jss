@@ -1,58 +1,60 @@
 <html>
 <body>
 <textarea cols="100%" rows="100%">
-  <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <script>
-                function AB_bal(){
-                    var ax_bal= parseFloat(document.getElementById('ax').value);
-                    var bx_bal= parseFloat(document.getElementById('bx').value);
-                    var ay_bal= parseFloat(document.getElementById('ay').value);
-                    var by_bal= parseFloat(document.getElementById('by').value);
-                    var p1 = Math.pow(ax_bal-bx_bal,2);
-                    var p2 = Math.pow(ay_bal-by_bal,2);
-                    var h = p1+p2;
-                    var odc = Math.sqrt(h);
-                    document.getElementById("abc").innerHTML ="AB= "+odc;
-                }
-                function BC_bal(){
-                    var bx_bal= parseFloat(document.getElementById('bx').value);
-                    var xc_bal= parseFloat(document.getElementById('xc').value);
-                    var by_bal= parseFloat(document.getElementById('by').value);
-                    var yc_bal= parseFloat(document.getElementById('yc').value);
-                    var p1 = Math.pow(bx_bal-xc_bal,2);
-                    var p2 = Math.pow(by_bal-yc_bal,2);
-                    var h = p1+p2;
-                    var odc = Math.sqrt(h);
-                    document.getElementById("abc").innerHTML ="BC= "+odc;
-                }
-                function AC_bal(){
-                    var ax_bal= parseFloat(document.getElementById('ax').value);
-                    var xc_bal= parseFloat(document.getElementById('xc').value);
-                    var ay_bal= parseFloat(document.getElementById('ay').value);
-                    var yc_bal= parseFloat(document.getElementById('yc').value);
-                    var p1 = Math.pow(ax_bal-xc_bal,2);
-                    var p2 = Math.pow(ay_bal-yc_bal,2);
-                    var h = p1+p2;
-                    var odc = Math.sqrt(h);
-                    document.getElementById("abc").innerHTML ="AC= "+odc;
-                    
-                }
-        </script>
-    Podaj Ax: <input type="text" id="ax" value=""><br><br><br>
-    Podaj Ay: <input type="text" id="ay" value=""><br><br><br>
-    Podaj Bx: <input type="text" id="bx" value=""><br><br><br>
-    Podaj By: <input type="text" id="by" value=""><br><br><br>
-    Podaj Cx: <input type="text" id="xc" value=""><br><br><br>
-    Podaj Cy: <input type="text" id="yc" value=""><br><br><br>
-    <input type="button" name="AB" value="AB" Onclick="AB_bal()"><br><br>
-    <input type="button" name="BC" value="BC" Onclick="BC_bal()"><br><br>
-    <input type="button" name="AC" value="AC" Onclick="AC_bal()"><br><br>
-    <div style="color:red;font-size:50px;"id="abc"></div>
-    </body>
-    </html>
+    <html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+</head>
+<html>
+<head>
+<title>
+Przykład obliczenia V i Pc walca
+</title>
+<script language="JavaScript">
+function V(r,h)
+{
+r_liczba=parseFloat(r)
+h_liczba=parseFloat(h)
+V_wynik=Math.PI*r_liczba*r_liczba*h_liczba
+document.getElementsByName('obj')[0].value=V_wynik.toFixed(2); /* na dokument */
+alert("V="+V_wynik.toFixed(2)+" cm^3"); /*do okna Alert */
+pokaz1.innerHTML="V="+V_wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
+29
+}
+function Pc(r,h)
+{
+r_liczba=parseFloat(r)
+h_liczba=parseFloat(h)
+Pc_wynik=2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba
+document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+alert("Pc="+Pc_wynik.toFixed(2)+" cm^2");
+pokaz2.innerHTML="Pc="+Pc_wynik.toFixed(2)+"cm^2";
+}
+</script>
+</head>
+<body>
+Pobliczanie V i Pc walca
+<br> <br>
+<form name="formularz" action="..." onsubmit="V(this.promien.value,this.wysokosc.value);
+Pc(this.promien.value,this.wysokosc.value);return false">
+Podaj r=
+<input size="6" name="promien">
+Podaj h=
+<input size="6" name="wysokosc">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+V=
+<input size="6" name="obj">
+Pc=
+<input size="6" name="pole">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
 </body>
 </html>

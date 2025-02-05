@@ -1,0 +1,58 @@
+<html>
+<body>
+<textarea cols="100%" rows="100%">
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+                function AB_bal(){
+                    var ax_bal= parseFloat(document.getElementById('ax').value);
+                    var bx_bal= parseFloat(document.getElementById('bx').value);
+                    var ay_bal= parseFloat(document.getElementById('ay').value);
+                    var by_bal= parseFloat(document.getElementById('by').value);
+                    var p1 = Math.pow(ax_bal-bx_bal,2);
+                    var p2 = Math.pow(ay_bal-by_bal,2);
+                    var h = p1+p2;
+                    var odc = Math.sqrt(h);
+                    document.getElementById("abc").innerHTML ="AB= "+odc;
+                }
+                function BC_bal(){
+                    var bx_bal= parseFloat(document.getElementById('bx').value);
+                    var xc_bal= parseFloat(document.getElementById('xc').value);
+                    var by_bal= parseFloat(document.getElementById('by').value);
+                    var yc_bal= parseFloat(document.getElementById('yc').value);
+                    var p1 = Math.pow(bx_bal-xc_bal,2);
+                    var p2 = Math.pow(by_bal-yc_bal,2);
+                    var h = p1+p2;
+                    var odc = Math.sqrt(h);
+                    document.getElementById("abc").innerHTML ="BC= "+odc;
+                }
+                function AC_bal(){
+                    var ax_bal= parseFloat(document.getElementById('ax').value);
+                    var xc_bal= parseFloat(document.getElementById('xc').value);
+                    var ay_bal= parseFloat(document.getElementById('ay').value);
+                    var yc_bal= parseFloat(document.getElementById('yc').value);
+                    var p1 = Math.pow(ax_bal-xc_bal,2);
+                    var p2 = Math.pow(ay_bal-yc_bal,2);
+                    var h = p1+p2;
+                    var odc = Math.sqrt(h);
+                    document.getElementById("abc").innerHTML ="AC= "+odc;
+                    
+                }
+        </script>
+    Podaj Ax: <input type="text" id="ax" value=""><br><br><br>
+    Podaj Ay: <input type="text" id="ay" value=""><br><br><br>
+    Podaj Bx: <input type="text" id="bx" value=""><br><br><br>
+    Podaj By: <input type="text" id="by" value=""><br><br><br>
+    Podaj Cx: <input type="text" id="xc" value=""><br><br><br>
+    Podaj Cy: <input type="text" id="yc" value=""><br><br><br>
+    <input type="button" name="AB" value="AB" Onclick="AB_bal()"><br><br>
+    <input type="button" name="BC" value="BC" Onclick="BC_bal()"><br><br>
+    <input type="button" name="AC" value="AC" Onclick="AC_bal()"><br><br>
+    <div style="color:red;font-size:50px;"id="abc"></div>
+    </body>
+    </html>
+</body>
+</html>

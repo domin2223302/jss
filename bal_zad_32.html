@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div class="train-info">
+    <script type="text/javascript">
+      function Samochod(maks_predkosc, marka, kolor, rok_prod) {
+        this.maks_predkosc = maks_predkosc;
+        this.marka = marka;
+        this.kolor = kolor;
+        this.rok_prod = rok_prod;
+      }
+
+      const pierwszySamochod = new Samochod(
+        '320km/h',
+        'Audi',
+        'Szary',
+        2025
+      );
+
+      const drugiSamochod = new Samochod(
+        '300km/h',
+        'BMW',
+        'Czerwony',
+        2024
+      );
+
+      const trzeciSamochod = new Samochod(
+        '290km/h',
+        'Mercedes',
+        'Czarny',
+        2023
+      );
+
+      const czwartySamochod = new Samochod(
+        '280km/h',
+        'Mazda',
+        'Niebieski',
+        2020
+      );
+
+      Samochod.prototype.getInfo = function () {
+        alert(
+          'Maksymalna prędkość: ' + this.maks_predkosc +
+          '\nMarka: ' + this.marka +
+          '\nKolor: ' + this.kolor +
+          '\nRok produkcji: ' + this.rok_prod
+        );
+      };
+
+      pierwszySamochod.getInfo();
+      drugiSamochod.getInfo();
+      trzeciSamochod.getInfo();
+      czwartySamochod.getInfo();
+
+      drugiSamochod.uszk = true;
+      drugiSamochod.pokaz_bal = function () {
+        alert(`Samochód ${this.marka}, uszkodzony: ${this.uszk}`);
+      };
+
+      drugiSamochod.pokaz_bal();
+    </script>
+  </div>
+</body>
+</html>

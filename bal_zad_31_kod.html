@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+  <title> zad31_kod</title>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <textarea cols="80" rows="60">
+    <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Samochód</h1>
+    <script type="text/javascript">
+      var samochod = {
+        maks_predkosc: '320km/h',
+        marka: 'audi', 
+        kolor: 'szary',
+        samochod_wyswietl_bal: function () {
+          document.write(
+            'maksymalna prędkość: ' + this.maks_predkosc + '<br>' +
+            'marka samochodu: ' + this.marka + '<br>' +
+            'kolor: ' + this.kolor + '<br>'
+          );
+        }
+      };
+
+      samochod.samochod_wyswietl_bal();
+
+      samochod.rok_prod = "2025";
+      samochod.pokaz_bal = function () { 
+        document.write('rok produkcji: ' + this.rok_prod); 
+      };
+      
+      samochod.pokaz_bal();
+    </script>
+</body>
+</html>
+
+    </textarea>
+</body>
+
+</html>

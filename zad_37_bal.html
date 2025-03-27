@@ -1,0 +1,30 @@
+<DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+        </title>
+        <style>
+            #par1 {
+                color: green;
+                font-size: 1cm;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p id="par1"> JAVASCRIPT i jego poczatki </p><br>
+            <input type="button" , value="sprawdz" , onclick="ready()"></button>
+            <script language="JavaScript">
+                function ready(){
+                    let x = prompt("w ktorym roku powstal JS?", "")
+                    let rok_bal =  x.toLowerCase();
+                    if (rok_bal == 1995) { document.write('<p style="color: blue; font-size: 4vw;">Dobrze!, JavaScript działa właśnie od tego roku.</p><br />');
+                    }else { document.write('<p style="color: red; font-size: 7vw;">Zła odpowiedź :(</p><br />');
+                }
+                }
+            </script>
+        </div>
+    </body>
+</html>

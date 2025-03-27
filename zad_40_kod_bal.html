@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            textarea{
+                width: 60vw;
+                height: 160vh;
+            }
+        </style>
+    </head>
+    <body>
+       zadanie 40 <br>
+          <textarea>
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Zadanie JavaScript</title>
+<meta charset="utf-8">
+<style>
+h1 { text-transform: uppercase; }
+</style>
+</head>
+<body>
+<h1>Proste działania</h1></br></br>
+<h1>Volodymyr Bal 3K</h1>
+<label for="a_bal">Podaj pierwszą liczbę:</label> <input type="number" id="a_bal">
+<br><br>
+<label for="b_bal">Podaj drugą liczbę:</label> <input type="number" id="b_bal">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_bal()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_bal()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_bal()">
+<input type="button" value="DZIELENIE" onclick="iloraz_bal()">
+<input type="button" value="TEORIA" onclick="teoria_bal()">
+<div id="wynik_bal" style="margin-top:20px;"></div>
+<script>
+function suma_bal()
+{
+var a_bal = document.getElementById("a_bal").value;
+var b_bal = document.getElementById("b_bal").value;
+if (a_bal == "" || b_bal == "")
+{
+document.getElementById("wynik_bal").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a_bal = parseFloat(a_bal);
+b_bal = parseFloat(b_bal);
+var suma_bal = a_bal + b_bal;
+document.getElementById("wynik_bal").innerHTML = "Wynik działania wynosi: " + suma_bal;
+}
+}
+function roznica_bal()
+{
+var a_bal = document.getElementById("a_bal").value;
+var b_bal = document.getElementById("b_bal").value;
+if (a_bal == "" || b_bal == "")
+{
+document.getElementById("wynik_bal").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a_bal = parseFloat(a_bal);
+b_bal = parseFloat(b_bal);
+var roznica_bal = a_bal - b_bal;
+document.getElementById("wynik_bal").innerHTML = "Wynik działania wynosi: " + roznica_bal;
+}
+}
+function iloczyn_bal()
+{
+var a_bal = document.getElementById("a_bal").value;
+var b_bal = document.getElementById("b_bal").value;
+if (a_bal == "" || b_bal == "")
+{
+document.getElementById("wynik_bal").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a_bal = parseFloat(a_bal);
+b_bal = parseFloat(b_bal);
+var iloczyn_bal = a_bal * b_bal;
+document.getElementById("wynik_bal").innerHTML = "Wynik działania wynosi: " + iloczyn_bal;
+}
+}
+function iloraz_bal()
+{
+var a_bal = document.getElementById("a_bal").value;
+var b_bal = document.getElementById("b_bal").value;
+if (a_bal == "" || b_bal == "")
+{
+document.getElementById("wynik_bal").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a_bal = parseFloat(a_bal);
+b_bal = parseFloat(b_bal);
+if (b_bal == 0)
+{
+document.getElementById("wynik_bal").innerHTML = "Nie wolno dzielić przez zero.";
+}
+else
+{
+var iloraz_bal = a_bal / b_bal;
+document.getElementById("wynik_bal").innerHTML = "Wynik działania wynosi: " + iloraz_bal;
+}
+}
+}
+function teoria_bal(){
+document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
+document.write("<font color=blue size=4>\u0026\u0026 i x=3 y=4 (x < 9 \u0026\u0026 y > 2) wynik-->prawda</font>"+"<br>");
+document.write("<font color=green size=4>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</font>"+"<br>");
+document.write("<font color=blue size=4>|| lub x=3 y=4 (x==8 || y==6) wynik-->fałsz</font>"+"<br>");
+}
+</script>
+</body>
+</html>
+
+
+            </textarea>
+        </body>
+    </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bal-Zadanie38</title>
+    <style>
+        body {
+            background-color: silver;
+            text-align: center;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="green" id="info"></h1>
+    <button onclick="menu()">Wybierz opcję</button>
+
+    <script>
+        const imie_bal = "Volodymyr";
+        const nazwisko_bal = "Bal";
+        const dzienUrodzenia_bal = 15;
+        const numerDziennika_bal = 1; 
+        
+        let liczba1_bal = imie_bal.length;
+        let liczba2_bal = liczba1_bal + 7;
+        let liczba3_bal = nazwisko_bal.length;
+        let liczba4_bal = liczba3_bal + 4;
+        let opcja3_bal = liczba1_bal;
+        let opcja29_bal = liczba3_bal + 20;
+        let opcja58_bal = dzienUrodzenia_bal + 50;
+        let fontSize_bal = 40 + (numerDziennika_bal % 7) + "px";
+
+        document.getElementById("info").innerHTML = `Moje nazwisko to: ${imie_bal} ${nazwisko_bal}<br>
+        liczba1 = ${liczba1_bal}<br> liczba2 = ${liczba2_bal}<br> liczba3 = ${liczba3_bal}<br> liczba4 = ${liczba4_bal}`;
+        document.getElementById("info").style.fontSize = fontSize_bal;
+
+        function menu() {
+            let opcja_bal = parseInt(prompt("Wybierz opcję: " + opcja3_bal + ", " + opcja29_bal + ", " + opcja58_bal));
+            
+            if (opcja_bal === opcja3_bal) {
+                document.body.innerHTML += `<p class='blue'>Jesteś w opcja ${opcja3_bal} --> teoria</p>`;
+                document.body.innerHTML += `<p class='blue'>&&& i x=3 y=4 (x < 9 && y > 2) wynik-->prawda</p>`;
+                document.body.innerHTML += `<p class='blue'>|| lub x=3 y=4 (x==8 || y==6) wynik-->fałsz</p>`;
+                document.body.innerHTML += `<p class='blue'>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</p>`;
+            } else if (opcja_bal === opcja29_bal) {
+                let liczba_bal = parseInt(prompt("Podaj liczbę do sprawdzenia: "));
+                if (liczba_bal >= -2 && liczba_bal < 3) {
+                    document.body.innerHTML += `<p class='green'>Liczba należy do przedziału</p>`;
+                } else {
+                    document.body.innerHTML += `<p class='red'>Liczba nie należy do przedziału</p>`;
+                }
+            } else if (opcja_bal === opcja58_bal) {
+                let liczba_bal = parseInt(prompt("Podaj liczbę do sprawdzenia: "));
+                if (liczba_bal < liczba1_bal || liczba_bal >= liczba2_bal) {
+                    document.body.innerHTML += `<p class='green'>Liczba należy do przedziału</p>`;
+                } else {
+                    document.body.innerHTML += `<p class='red'>Liczba nie należy do przedziału</p>`;
+                }
+            } else {
+                document.body.innerHTML += `<p class='red'>Nie ma takiej opcji</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
